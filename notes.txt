@@ -1,0 +1,16 @@
+npm i -D typescript -->in terminal
+-D is shorthand of --save-dev which means dev-dependency
+
+npx tsc --init -->in terminal
+used to generate tsconfig.json 
+TypeScript is flexible. Without a configuration file, the compiler doesn't know how strict you want to be. The tsconfig.json allows you to set the "strictness" of your code.
+Example: Do you want to allow variables to have an any type? Or should the compiler throw an error if you forget to define a type?
+
+//to run the ts file first uncomment 
+"rootDir": "./src",
+"outDir": "./dist",
+this in the tsconfig.json file to make sure that the output is generated in the dist folder only
+npx tsc --> write this to generate output in dist. gives d.ts, .js, .js.map, d.ts.map files as output
+to run this output write node dist/index.js
+
+set the package.json to write the script 
