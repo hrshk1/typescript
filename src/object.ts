@@ -107,3 +107,33 @@ placeOrder({
 })
 
 //Required keyword is used to make all the properties of a type required.  
+
+
+type coffee = {
+    name: string;
+    price: number;
+    isHot: boolean;
+    ingredients: string[];
+}
+
+type BasicChaiInfor = Pick<coffee, "name" | "price">;
+
+const basicInfo: BasicChaiInfor = {
+    name: "Masala Chai",
+    price: 100,
+}
+
+//pick is used to create a new type by picking specific properties from an existing type.  
+
+
+type ChaiNew = {
+    name: string;
+    price: number;
+    isHot: boolean;
+    secret_ingredients: string;
+}
+
+type PublicChaiInfo = Omit<ChaiNew, "secret_ingredients">;
+
+//Omit is used to create a new type by omitting specific properties from an existing type.  
+
