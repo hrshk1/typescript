@@ -81,4 +81,27 @@ makeChai(ChaiType.MASALA)
 // since we have defined that the type parameter of the makeChai function should be of type ChaiType, we can only pass values that are defined in the ChaiType enum. In this case, we are passing ChaiType.MASALA, which is a valid value from the ChaiType enum. If we try to pass a value like "masasla" (a string that is not part of the ChaiType enum), we will get a type error because it does not match any of the defined enum values.
 
 
-//in std practices
+//in std practices the enum members are usually written in uppercase letters. also we generally use enums to represent a set of related constants, such as different types of chai, cup sizes, or order statuses therefore we use members of sme datatype but different datatypes can also be used in enums as shown below
+
+enum MixedEnum {
+    NUMBER = 1,
+    STRING = "Hello",
+    BOOLEAN = 1
+}
+
+//to create immutable enums in TypeScript, we can use the const keyword before the enum declaration. This will prevent any modifications to the enum members after they are defined.
+
+const enum ImmutableEnum {
+    A = 1,
+    B = 2,
+    C = 3
+}
+const s = ImmutableEnum.A
+
+//Note: we can also push anything extra in tuples. since at the end of the day tuple is just an array with fixed types at specific positions. so we can push any type of value into a tuple, but it will not be type-safe and may lead to unexpected behavior. It is generally recommended to avoid pushing values into tuples and instead use them as intended, with fixed types at specific positions.
+
+let t: [string, number] = ["Hello", 42]
+t.push("World") // This is allowed, but it will not be type-safe. 
+
+
+// An enum (enumeration) is a TypeScript feature that defines a collection of related constants under one name.  
