@@ -68,6 +68,7 @@ function isChaiOrder(obj:any): obj is ChaiOrder{
         typeof obj.sugar === "number"
     )
 }
+//If this function returns true, then trust me, obj is a ChaiOrder
 
 //the above checks are only known as type guards 
 
