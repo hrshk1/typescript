@@ -5,8 +5,8 @@
 //npm install -D @types/axios
 //sometimes even the above command won't work in that case you need to search for the type definitions in the DefinitelyTyped repository on GitHub and install them manually. You have to make .d.ts file and paste that code
 
-import axios, {AxiosResponse} from "axios"
-
+import axios from "axios"
+import type { AxiosResponse } from "axios";
 interface Todo {
     userId: number;
     id: number;
