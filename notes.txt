@@ -14,3 +14,6 @@ npx tsc --> write this to generate output in dist. gives d.ts, .js, .js.map, d.t
 to run this output write node dist/index.js
 
 set the package.json to write the script 
+
+//when using typescript with react sometimes interfaces can be used in export in a separate types folder or a file and that file will be completely a ts file and not tsx file
+also while importing that use import type {} from "filename.ts"
